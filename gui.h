@@ -5,6 +5,10 @@
 #include <vector>
 #include <iostream>
 
+#define OPENFILEDIALOG_TRUE 1
+#define OPENFILEDIALOG_CANCEL 0
+#define OPENFILEDIALOG_ERROR -1
+
 using namespace std;
 
 typedef struct
@@ -73,4 +77,6 @@ public:
     GUIbutton* getButton(char* name);
     GUIedit* getEdit(char* name);
 };
+
+int OpenFileDialog(HWND hwnd,char* path,char* title,char* filter);
 #endif // GUI_H_INCLUDED

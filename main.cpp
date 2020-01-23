@@ -7,6 +7,7 @@ using namespace std;
 
 Window *window = new Window;
 Window *windowsettings = new Window;
+File file;
 
 LRESULT CALLBACK wndproc(HWND hwnd,UINT msg,WPARAM wparam,LPARAM lparam)
 {
@@ -28,27 +29,18 @@ LRESULT CALLBACK wndproc(HWND hwnd,UINT msg,WPARAM wparam,LPARAM lparam)
             if(wparam == gui->getButtonID("savefile"))
             {
                 cout<<"save"<<endl;
-                char* filefilter = "Assembly file(*.asm)\0*.asm\0\0";
-                char* filepath = new char[MAX_PATH];
-                OPENFILENAME filedlg = {};
-                filedlg.lStructSize = sizeof(OPENFILENAME);
-                filedlg.hwndOwner = window->getHWND();
-                filedlg.lpstrFilter=filefilter;
-                filedlg.lpstrFile=filepath;
-                filedlg.lpstrFileTitle="Save code to file";
-                filedlg.nMaxFile=MAX_PATH;
-                filedlg.lpstrDefExt="asm";
-                filedlg.Flags=OFN_OVERWRITEPROMPT;
-
-                GetSaveFileName(&filedlg);
-                File file;
-                file.setname(filepath);
+                char* path;
+                if(!OpenFileDialog(window->getHWND(),path,"Save File","Assembly file(*.asm)\0*.asm\0\0"))
+                    break;
+                file.setname(path);
                 file.setbuff(gui->getEdit("editcode")->getText());
                 file.write();
+                cout<<"file saved"<<endl;
+
             }
             if(wparam == gui->getButtonID("compilefile"))
             {
-                cout<<"compile"<<endl;
+                cout<<file.getname()<<endl;
             }
     }
     return DefWindowProc(hwnd,msg,wparam,lparam);

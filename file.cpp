@@ -29,6 +29,10 @@ void File::setbuff(char* buff)
     this->buff = buff;
 }
 
-void File::setname(char* name){
+void File::setname(string name){
     this->name = name;
+}
+
+char* File::getname(){
+    return const_cast<char*>(name.c_str());
 }

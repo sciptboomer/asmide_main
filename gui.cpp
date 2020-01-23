@@ -120,3 +120,24 @@ void GUIelement::setFontDefault(){
     defaultFont = (HFONT)GetStockObject(DEFAULT_GUI_FONT);
     SendMessage(hwnd, WM_SETFONT, WPARAM (defaultFont), TRUE);
 }
+
+int OpenFileDialog(HWND hwnd,char* path,char* title,char* filter)
+{
+    path = new char[MAX_PATH];
+    ZeroMemory(path,sizeof(char)*MAX_PATH);
+    OPENFILENAME filedlg = {};
+    filedlg.lStructSize = sizeof(OPENFILENAME);
+    filedlg.hwndOwner = hwnd;
+    filedlg.lpstrFilter=filter;
+    filedlg.lpstrFile=path;
+    filedlg.lpstrFileTitle=title;
+    filedlg.nMaxFile=MAX_PATH;
+    filedlg.lpstrDefExt="asm";
+    filedlg.lpstrInitialDir="c:\\";
+    filedlg.Flags=OFN_EXPLORER | OFN_FILEMUSTEXIST | OFN_HIDEREADONLY;
+    if(GetSaveFileName(&filedlg)){
+        return true;
+    }
+    return false;
+
+}

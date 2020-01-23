@@ -35,3 +35,40 @@
 
 1579476608 c:\users\vl4dy\onedrive\Рабочий стол\edit\asdmide\file.h
 
+1579765087 source:c:\users\admin\desktop\asmide-master\asdmide\file.cpp
+	<iostream>
+	<fstream>
+	"file.h"
+
+1579765297 c:\users\admin\desktop\asmide-master\asdmide\file.h
+	<iostream>
+
+1579764961 source:c:\users\admin\desktop\asmide-master\asdmide\gui.cpp
+	<windows.h>
+	<iostream>
+	<vector>
+	"gui.h"
+
+1579764921 c:\users\admin\desktop\asmide-master\asdmide\gui.h
+	<windows.h>
+	<vector>
+	<iostream>
+
+1579765029 source:c:\users\admin\desktop\asmide-master\asdmide\main.cpp
+	<iostream>
+	"window.h"
+	"gui.h"
+	"file.h"
+
+1579698982 c:\users\admin\desktop\asmide-master\asdmide\window.h
+	<windows.h>
+	"gui.h"
+
+1579698982 source:c:\users\admin\desktop\asmide-master\asdmide\resource.rc
+
+1579698982 source:c:\users\admin\desktop\asmide-master\asdmide\window.cpp
+	<iostream>
+	<windows.h>
+	"window.h"
+	"gui.h"
+
