@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1579527641 source:c:\users\vl4dy\onedrive\Рабочий стол\edit\asdmide\main.cpp
+	<iostream>
+	"window.h"
+	"gui.h"
+	"file.h"
+
+1579299282 c:\users\vl4dy\onedrive\Рабочий стол\edit\asdmide\window.h
+	<windows.h>
+	"gui.h"
+
+1579476174 c:\users\vl4dy\onedrive\Рабочий стол\edit\asdmide\gui.h
+	<windows.h>
+	<vector>
+	<iostream>
+
+1579527670 source:c:\users\vl4dy\onedrive\Рабочий стол\edit\asdmide\window.cpp
+	<iostream>
+	<windows.h>
+	"window.h"
+	"gui.h"
+
+1579526936 source:c:\users\vl4dy\onedrive\Рабочий стол\edit\asdmide\gui.cpp
+	<windows.h>
+	<iostream>
+	<vector>
+	"gui.h"
+
+1579217475 source:c:\users\vl4dy\onedrive\Рабочий стол\edit\asdmide\resource.rc
+
+1579526869 source:c:\users\vl4dy\onedrive\Рабочий стол\edit\asdmide\file.cpp
+	<iostream>
+	<fstream>
+	"file.h"
+
+1579476608 c:\users\vl4dy\onedrive\Рабочий стол\edit\asdmide\file.h
+
